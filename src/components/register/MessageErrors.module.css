@@ -1,0 +1,7 @@
+.container_msg_error{
+   display: flex;
+   gap: 10px;
+   color: red;
+   font-size: 1.2em;
+   transition: .5s;
+}

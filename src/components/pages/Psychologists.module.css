@@ -1,0 +1,17 @@
+.container_psycholigits{
+   padding: 20px 10px;
+}
+
+.container_psycholigits h1{
+   margin: 20px 0;
+}
+
+.container_cards{
+   width: 100%;
+   flex-wrap: wrap;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   margin: 0 auto;
+}

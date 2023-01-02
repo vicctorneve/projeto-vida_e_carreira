@@ -1,0 +1,51 @@
+.consultations_container{
+   padding: 10px;
+}
+
+.consultations_container p{
+   text-align: center;
+   font-size: 1.5em;
+}
+.consultations_container .container_title{
+   padding: 10px 0;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+   justify-content: space-between;
+   gap: 10px;
+   width: 100%;
+   margin: 40px 0;
+}
+
+.consultations_container .container_title .btn{
+   display: flex;
+   text-decoration: none;
+   align-items: center;
+   justify-content: center;
+   width: 200px;
+   padding: 10px;
+   background-color: #FF7170;
+   color: white;
+   font-size: 1.2em;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.consultations_container table{
+   width: 100%;
+   border-collapse: collapse;
+   margin: auto;
+}
+
+.consultations_container table th{
+   background-color: cadetblue;
+   color: white;
+}
+
+.consultations_container table th,td{
+   text-align: center;
+   padding: 10px;
+   border: 1px solid black;
+}

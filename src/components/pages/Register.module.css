@@ -1,0 +1,52 @@
+.register_container{
+   background-color: #87A2F1;
+}
+
+.register_container form{
+   color: white;
+   border-radius: 10px;
+   width: 300px;
+   display: flex;
+   padding: 10px;
+   flex-direction: column;
+   background-color: rgba(0, 0, 0, 0.486);
+   gap: 10px;
+   box-shadow: 1px 1px 10px 1px rgb(0 0 0 / 34%);
+}
+
+.register_container form h2{
+   text-align: center;
+}
+
+.register_container form input{
+   padding: .6em;
+}
+
+.container_password{
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.container_password input{
+   width: 100%;
+}
+
+.container_password svg{
+   position: absolute;
+   right: 10px;
+   font-size: 1.5em;
+   color: black;
+   cursor: pointer;
+}
+
+.register_container form button{
+   background-color: #80DD80;
+   padding: 10px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   font-weight: bold;
+}

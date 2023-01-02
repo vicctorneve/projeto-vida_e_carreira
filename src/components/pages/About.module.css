@@ -1,0 +1,33 @@
+.about_container{
+   padding: 20px 10px;
+   background-color: #03295A;
+   color: white;
+}
+
+.about_container h1{
+   width: 100vw;
+   text-align: center;
+}
+
+.container_cards{
+   flex-wrap: wrap;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   margin: 0 auto;
+}
+
+.card{
+   background-color: white;
+   color: black;
+   padding: 10px;
+   width: 30%;
+   min-width: 250px;
+   min-height: 300px;
+   border-radius: 10px;
+}
+
+.card h2{
+   text-align: center;
+}

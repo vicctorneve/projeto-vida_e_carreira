@@ -1,0 +1,14 @@
+td.edit_container button{
+   cursor: pointer;
+   padding: 10px;
+   width: 40%;
+   min-width: 80px;
+}
+td.edit_container button.edit{
+
+   margin-right: 10px;
+}
+
+td.edit_container button svg{
+   font-size: 1.3em;
+}
