@@ -7,7 +7,6 @@ import Message from "../layout/Message"
 import { Link, useLocation } from "react-router-dom"
 
 function Consultations(){
-
    const [consultations, setConsultations] = useState([])
    const [removeLoading, setRemoveLoading] = useState(false)
    const [consultationMessage, setConsultationMessage] = useState()
@@ -60,7 +59,6 @@ function Consultations(){
       .catch(err => console.log(err))
    }
 
-
    return(
       <section className={styles.consultations_container}>
          <Container>
@@ -92,9 +90,6 @@ function Consultations(){
                         />
                      ))}
                   </tbody>
-                  <tfoot>
-
-                  </tfoot>
                </table>
             }
             {!removeLoading && <Loading/>}

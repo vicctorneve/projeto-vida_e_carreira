@@ -12,13 +12,11 @@ function Psychologists(){
    const [psicologos, setPsicologos] = useState([])
    const [removeLoading, setRemoveLoading] = useState(false)
 
-   function agendarConsulta(id){
-      navigate('/newconsultation', {state:{idPsicologo: id}})
-   }
-
+   const agendarConsulta = (id) => navigate('/newconsultation', {state:{idPsicologo: id}})
    
    useEffect(()=>{
       setTimeout(()=>{
+         // Para ver o loading
          fetch('http://localhost:5000/psicologos',{
             method:'GET',
             headers:{

@@ -6,14 +6,14 @@ import { useLocation } from "react-router-dom";
 
 function NewConsultation(){
 
-   let idPsicologo = ''
+   const navigate = useNavigate();
    const location = useLocation()
+
+   let idPsicologo = ''
 
    if(location.state){
       idPsicologo = location.state.idPsicologo
    }
-
-   const navigate = useNavigate();
 
    function createPost(consultation){
       fetch('http://localhost:5000/consultas',{

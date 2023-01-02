@@ -5,7 +5,6 @@ import SubmitButton from "../form/SubmitButton"
 import styles from './ConsultationForm.module.css'
 
 function ConsultaForm({handleSubmit, consultationData, value}){
-
    const [psicologos, setPsicologos] = useState([])
    const [consultation, setConsulta] = useState(consultationData || {});
 
@@ -22,8 +21,6 @@ function ConsultaForm({handleSubmit, consultationData, value}){
       })
       .catch(err => console.log(err))
    }, [])
-   
-   
 
    function handleChange(e){
       if(e.target.name === "date"){
@@ -55,7 +52,6 @@ function ConsultaForm({handleSubmit, consultationData, value}){
       let dd = date.substring(8,10)
       return `${dd}/${mm}/${yyyy}` 
    }
-
 
    const submit = e =>{
       e.preventDefault()
@@ -97,6 +93,7 @@ function ConsultaForm({handleSubmit, consultationData, value}){
          <SubmitButton
             text="Marcar consulta"
          />
+         
       </form>
    )
 }

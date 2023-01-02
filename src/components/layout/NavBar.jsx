@@ -3,9 +3,6 @@ import styles from './NavBar.module.css'
 
 function NavBar({customClass, handleClick}){
 
-   
-
-
    return(
       <>
          <nav className={`${styles.menu} ${styles[customClass]}`}>

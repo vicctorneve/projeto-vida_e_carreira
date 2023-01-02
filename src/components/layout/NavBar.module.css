@@ -29,6 +29,7 @@
 }
 
 .list{
+   align-items: center;
    list-style: none;
    padding-inline-start: 0;
    

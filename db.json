@@ -1,5 +1,12 @@
 {
-  "accounts": [],
+  "accounts": [
+    {
+      "user": "vicctorn",
+      "password": "neves1",
+      "passwordConfirm": "neves1",
+      "id": 1
+    }
+  ],
   "consultas": [
     {
       "date": "10/01/2023",

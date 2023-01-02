@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom"
 import MessageErrors from "../register/MessageErrors"
 import { Link } from "react-router-dom"
 
-function Login({accountsData}){
-   
+function Login(){
    const [message, setMessage] = useState('')
    const [visible, setVisible] = useState(true)
    const [type, setType] = useState('password')
@@ -39,23 +38,16 @@ function Login({accountsData}){
       setType('password')
    }
 
-   function handleChange(e){
-      setAccounts({
-         ...accounts,
-         [e.target.name]: e.target.value 
-      })
-   }
-   
+   const handleChange = e => setAccounts({...accounts, [e.target.name]: e.target.value })
 
    function submit(e){
       e.preventDefault();
-      if(login()){
-         navigate('/')
-      }
+      isValidLogin() && navigate('/', {state: {user: accounts.user}})
+         
       
    }
 
-   function login(){
+   function isValidLogin(){
       for (let i = 0; i < accountsdb.length; i++) {
          if(accounts.user === accountsdb[i].user && accounts.password === accountsdb[i].password){
             setMessage('')

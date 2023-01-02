@@ -1,15 +1,12 @@
 import {BsEyeSlashFill, BsEyeFill} from 'react-icons/bs'
 import styles from '../pages/Register.module.css'
 import {  useState } from 'react'
-import MessageErrors from './MessageErrors'
 import { Link } from 'react-router-dom'
-
 
 function RegisterForm({handleSubmit, accountsData}){
    const [visible, setVisible] = useState(true)
    const [type, setType] = useState('password')
    const [accounts, setAccounts] = useState(accountsData || {})
-
 
    function toggleEye(){
       setVisible(!visible)
@@ -20,17 +17,11 @@ function RegisterForm({handleSubmit, accountsData}){
       setType('password')
    }
 
-   function handleChange(e){ 
-      setAccounts({
-         ...accounts,
-         [e.target.name]: e.target.value 
-      })
-   }
+   const handleChange = (e)=> setAccounts({...accounts,[e.target.name]: e.target.value })
+      
 
    function validateUser(){
-      if(accounts.user.length > 5){
-         return true
-      }
+      if(accounts.user.length > 5) return true
       return false
    }
 
@@ -43,11 +34,10 @@ function RegisterForm({handleSubmit, accountsData}){
 
    function register(){
       const passwordValid = validatePassword()
-
       const userValid = validateUser()
-      if(passwordValid && userValid){
-         handleSubmit(accounts)
-      }
+
+      if(passwordValid && userValid) handleSubmit(accounts)
+
    }
 
    const submit = (e) =>{

@@ -4,7 +4,6 @@ import Container from '../layout/Container'
 import styles from './Home.module.css'
 
 function Home(){
-
    return(
       <section className={styles.home_container}>
          <Container >
