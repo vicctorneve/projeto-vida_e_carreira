@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Input from '../form/Input'
 import { useNavigate } from "react-router-dom"
 import MessageErrors from "../register/MessageErrors"
+import { Link } from "react-router-dom"
 
 function Login({accountsData}){
    
@@ -99,7 +100,12 @@ function Login({accountsData}){
                </div>
 
                <button>Login</button>
-               
+               <p className={styles.login}>
+                  Nâo possui uma conta ?
+                  <Link to="/register">
+                     Registrar
+                  </Link>
+               </p>
             </form>
          </Container>
       </section>

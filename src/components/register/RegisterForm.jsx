@@ -2,6 +2,7 @@ import {BsEyeSlashFill, BsEyeFill} from 'react-icons/bs'
 import styles from '../pages/Register.module.css'
 import {  useState } from 'react'
 import MessageErrors from './MessageErrors'
+import { Link } from 'react-router-dom'
 
 
 function RegisterForm({handleSubmit, accountsData}){
@@ -121,6 +122,12 @@ function RegisterForm({handleSubmit, accountsData}){
                   )}
                </div>
                <button>Cadastrar</button>
+               <p className={styles.login}>
+                  Já possui uma conta ?
+                  <Link to="/login">
+                     Login
+                  </Link>
+               </p>
             </form>
    )
 }

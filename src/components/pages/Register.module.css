@@ -50,3 +50,12 @@
    cursor: pointer;
    font-weight: bold;
 }
+
+.register_container form .login{
+   text-align: center;
+}
+
+.register_container form .login a{
+   text-decoration: underline;
+   margin-left: 10px;
+}
