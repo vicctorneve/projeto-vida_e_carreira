@@ -10,10 +10,10 @@
   "consultas": [
     {
       "date": "10/01/2023",
-      "time": "15:00",
+      "time": "10:00",
       "psicologos": {
-        "id": "1",
-        "name": "Jessica"
+        "id": "2",
+        "name": "Patricia"
       },
       "id": 1
     }

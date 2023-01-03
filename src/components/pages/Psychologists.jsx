@@ -23,7 +23,12 @@ function Psychologists(){
                'Content-Type': 'application/json'
             }
          })
-         .then(resp => resp.json())
+         .then(resp => {
+            if(resp.ok){
+               return resp.json()
+            }
+            throw resp
+         })
          .then(data => {
             setPsicologos(data)
             setRemoveLoading(true)

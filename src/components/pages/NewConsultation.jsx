@@ -23,7 +23,12 @@ function NewConsultation(){
          },
          body: JSON.stringify(consultation)
       })
-      .then(resp => resp.json())
+      .then(resp => {
+         if(resp.ok){
+            return resp.json()
+         }
+         throw resp
+      })
       .then(() => {
          navigate('/consultation', {state:{message: "Consulta marcada com sucesso"}})
       })

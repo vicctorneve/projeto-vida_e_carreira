@@ -15,7 +15,12 @@ function Register(){
          },
          body: JSON.stringify(accounts)
       })
-      .then(resp => resp.json())
+      .then(resp => {
+         if(resp.ok){
+            return resp.json()
+         }
+         throw resp
+      })
       .then(() => {
          navigate('/login', {state:{message: "Consulta marcada com sucesso"}})
       })

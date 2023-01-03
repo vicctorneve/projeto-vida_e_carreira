@@ -56,14 +56,14 @@ function RegisterForm({handleSubmit, accountsData}){
                   name="user" 
                   placeholder="Insira seu nome:"
                   onChange={handleChange}
-                  
+                  required
                   
                />
                <label htmlFor="phone">Telefone:</label>
                <input 
                   id="phone" 
                   type="tel" 
-                  
+                  required
                   
                />
 
@@ -71,7 +71,7 @@ function RegisterForm({handleSubmit, accountsData}){
                <input 
                   id="date_nasc" 
                   type="date" 
-                  
+                  required
                   
                />
 
@@ -83,7 +83,7 @@ function RegisterForm({handleSubmit, accountsData}){
                      name="password"
                      placeholder="Insira uma senha:" 
                      onChange={handleChange}
-                     
+                     required
                      
                   />
                   {visible ? (
@@ -102,7 +102,7 @@ function RegisterForm({handleSubmit, accountsData}){
                      placeholder="Insira a senha novamente:" 
                      name="passwordConfirm"
                      onChange={handleChange}
-                     
+                     required
                      
                   />
                   {visible ? (
