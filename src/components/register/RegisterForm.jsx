@@ -1,23 +1,25 @@
-import {BsEyeSlashFill, BsEyeFill} from 'react-icons/bs'
 import styles from '../pages/Register.module.css'
 import {  useState } from 'react'
 import { Link } from 'react-router-dom'
+import Input from '../form/Input'
+import InputPassword from '../form/InputPassword'
 
 function RegisterForm({handleSubmit, accountsData}){
-   const [visible, setVisible] = useState(true)
-   const [type, setType] = useState('password')
    const [accounts, setAccounts] = useState(accountsData || {})
 
-   function toggleEye(){
-      setVisible(!visible)
-      if(visible){
-         setType('text')
+   const handleChange = (e)=> {
+      if(e.target.name === "dateBirth"){
+         setAccounts({ 
+            ...accounts, 
+            [e.target.name]: convertDate(e.target.value)
+         })
          return
       }
-      setType('password')
+      setAccounts({
+         ...accounts,
+         [e.target.name]: e.target.value 
+      })
    }
-
-   const handleChange = (e)=> setAccounts({...accounts,[e.target.name]: e.target.value })
       
 
    function validateUser(){
@@ -26,10 +28,15 @@ function RegisterForm({handleSubmit, accountsData}){
    }
 
    function validatePassword(){ 
-      if(accounts.password === accounts.passwordConfirm && accounts.password.length >= 6){
-         return true
-      }
+      if(accounts.password === accounts.confirmPassword && accounts.password.length >= 6) return true
       return false
+   }
+
+   function convertDate(date){ 
+      let yyyy = date.substring(0,4)
+      let mm = date.substring(5,7)
+      let dd = date.substring(8,10)
+      return `${dd}/${mm}/${yyyy}` 
    }
 
    function register(){
@@ -46,79 +53,59 @@ function RegisterForm({handleSubmit, accountsData}){
    }
 
    return(
+      <form onSubmit={submit} action="">
+         <h2>Register</h2>
+         <Input
+            id="name" 
+            text="Nome:"
+            type="text"
+            name="user" 
+            placeholder="Insira seu nome:"
+            handleOnChange={handleChange}
+            required
+         />
+         <Input
+            text="Telefone:"
+            id="phone" 
+            type="tel" 
+            name="telefone"
+            placeholder="Insira seu número"
+            handleOnChange={handleChange}
+            required
+         />
+         <Input
+            text="Data de nascimento:"
+            id="date_birth" 
+            type="date" 
+            name="dateBirth"
+            handleOnChange={handleChange}
+            required
+         />
 
-   <form onSubmit={submit} action="">
-               <h2>Register</h2>
-               <label htmlFor="name">Nome:</label>
-               <input 
-                  id="name" 
-                  type="text"
-                  name="user" 
-                  placeholder="Insira seu nome:"
-                  onChange={handleChange}
-                  required
-                  
-               />
-               <label htmlFor="phone">Telefone:</label>
-               <input 
-                  id="phone" 
-                  type="tel" 
-                  required
-                  
-               />
+         <InputPassword
+            text="Senha:"
+            id="password" 
+            placeholder="Insira uma senha:" 
+            handleOnChange={handleChange}
+            required
+         />
+         <InputPassword
+            id="confirmPassword" 
+            text="Confirmar senha:"
+            placeholder="Insira a senha novamente:" 
+            handleOnChange={handleChange}
+            required
+         />
 
-               <label htmlFor="date_nasc">Data de nascimento:</label>
-               <input 
-                  id="date_nasc" 
-                  type="date" 
-                  required
-                  
-               />
-
-               <label htmlFor="password">Senha:</label>
-               <div className={styles.container_password}>
-                  <input 
-                     id="password" 
-                     type={type} 
-                     name="password"
-                     placeholder="Insira uma senha:" 
-                     onChange={handleChange}
-                     required
-                     
-                  />
-                  {visible ? (
-                     <BsEyeSlashFill onClick={toggleEye}/>
-                  ): (
-                     <BsEyeFill onClick={toggleEye}/>
-                  )}
-                  
-               </div>
-
-               <label htmlFor="confirm_password">Confirmar senha:</label>
-               <div className={styles.container_password}>
-                  <input 
-                     id="confirm_password" 
-                     type={type} 
-                     placeholder="Insira a senha novamente:" 
-                     name="passwordConfirm"
-                     onChange={handleChange}
-                     required
-                     
-                  />
-                  {visible ? (
-                     <BsEyeSlashFill onClick={toggleEye}/>
-                  ): (
-                     <BsEyeFill onClick={toggleEye}/>
-                  )}
-               </div>
-               <button>Cadastrar</button>
-               <p className={styles.login}>
-                  Já possui uma conta ?
-                  <Link to="/login">
-                     Login
-                  </Link>
-               </p>
-            </form>
+         <button>Cadastrar</button>
+         
+         <p className={styles.login}>
+            Já possui uma conta ?
+            <Link to="/login">
+               Login
+            </Link>
+         </p>
+      </form>
    )
 }
 

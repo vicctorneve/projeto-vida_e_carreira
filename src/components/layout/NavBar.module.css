@@ -43,6 +43,30 @@ a:hover{
    text-decoration: 5px underline #F89F9F;
 }
 
+.profile{
+   cursor: pointer;
+   gap: 5px;
+   display: flex;
+   align-items: center;
+   font-size: 1.2em;
+   background-color: #F89F9F;
+   padding: 5px;
+   color: white;
+   border-radius: 10px;
+}
+
+.container_profile{
+   z-index: 1;
+   padding: 10px;
+   position: absolute;
+   top: 6vh;
+   right: 0;
+   background-color: #F89F9F;
+   color: white;
+   width: 250px;
+   height: 100px;
+}
+
 @media(max-width:700px){
    .menu{
       height: auto;

@@ -8,6 +8,9 @@ function Register(){
    const navigate = useNavigate()
 
    function createAccount(accounts){
+      accounts.logged = false
+      delete accounts.confirmPassword
+
       fetch('http://localhost:5000/accounts',{
          method: 'POST',
          headers:{
@@ -22,7 +25,7 @@ function Register(){
          throw resp
       })
       .then(() => {
-         navigate('/login', {state:{message: "Consulta marcada com sucesso"}})
+         navigate('/login', {state:{message: "Conta criada com sucesso"}})
       })
       .catch(err => console.log(err))
    }

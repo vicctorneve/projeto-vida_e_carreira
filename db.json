@@ -2,20 +2,31 @@
   "accounts": [
     {
       "user": "vicctorn",
+      "telefone": "75999845802",
+      "dateBirth": "17/12/2003",
       "password": "neves1",
-      "passwordConfirm": "neves1",
+      "logged": false,
       "id": 1
     }
   ],
   "consultas": [
     {
       "date": "10/01/2023",
-      "time": "10:00",
+      "time": "15:00",
       "psicologos": {
         "id": "2",
         "name": "Patricia"
       },
       "id": 1
+    },
+    {
+      "date": "10/01/2023",
+      "time": "15:00",
+      "psicologos": {
+        "id": "2",
+        "name": "Patricia"
+      },
+      "id": 2
     }
   ],
   "psicologos": [

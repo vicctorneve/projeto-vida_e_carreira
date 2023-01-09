@@ -84,7 +84,7 @@ function Consultations(){
                            id={consultation.id}
                            date={consultation.date}
                            time={consultation.time}
-                           psychologistName={consultation.psicologos.name}
+                           psychologistName={consultation.psicologos.name }
                            key={consultation.id}
                            handleRemove={removeConsultation}
                         />
