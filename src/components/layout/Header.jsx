@@ -38,7 +38,7 @@ function Header(){
       <header className={styles.header}>
          <Container>
             <Link to="/">
-               <p>Logo</p>
+               <Link className={styles.logo} to="/">Psicologia e terapia</Link>
             </Link>
             {visible ? (
                <>

@@ -6,6 +6,13 @@
    height: 5vh;
 }
 
+.logo{
+   font-size: 1.5em;
+   text-decoration: none;
+   color: #FF7170;
+   font-weight: bold;
+}
+
 .btnMenu{
    cursor: pointer;
    font-size: 1.5em;

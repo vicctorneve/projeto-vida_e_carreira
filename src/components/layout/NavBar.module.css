@@ -31,7 +31,7 @@
    
 }
 
-a{
+.list a{
    padding: 10px;
    cursor: pointer;
    text-decoration: none;
@@ -39,7 +39,7 @@ a{
    border-radius: 10px;
 }
 
-a:hover{
+.list a:hover{
    text-decoration: 5px underline #F89F9F;
 }
 
