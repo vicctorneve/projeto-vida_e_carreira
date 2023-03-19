@@ -35,25 +35,6 @@ function NewConsultation(){
       .catch(err => console.log(err))
    }
 
-   // function createPost(consultation){
-   //    accounts.consultas.push(consultation)
-   //    fetch(`http://localhost:5000/accounts/${accounts.id}`,{
-   //       method: 'PATCH',
-   //       headers: {
-   //          'Content-type': 'application/json'
-   //       },
-   //       body: JSON.stringify(accounts)
-   //    })
-   //    .then(resp => resp.json())
-   //    .then(data =>{
-   //       console.log(data)
-   //       // setAccounts(data)
-   //       // navigate('/login')
-   //    })
-   //    .catch(err => console.log(err))
-   // }
-
-   
    return(
       <section className={styles.newConsultation_container}>
          <Container customClass="min-height">

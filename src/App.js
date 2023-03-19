@@ -13,9 +13,13 @@ import NewConsultation from "./components/pages/NewConsultation";
 import Profile from "./components/pages/Profile";
 
 function App() {
+
+  
   return (
+    
     <Router>
       <Header/>
+      {console.log("oi")}
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
